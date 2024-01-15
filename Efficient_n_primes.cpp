@@ -12,7 +12,7 @@ void n_primes(unsigned int n){
     for (int j{2}; j < n; ++j ){
         bool n_is_prime{1};
         
-        for (int i{2}; n_is_prime && i*i <=34; ++i){
+        for (int i{2}; n_is_prime && i*i <= n; ++i){
             if (j % 2 == 0 || j % i == 0  ){
                 n_is_prime = 0;
             }
