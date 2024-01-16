@@ -9,11 +9,15 @@ int main();
 void n_primes(unsigned int n);
 //Function Definition
 void n_primes(unsigned int n){
-    for (int j{2}; j < n; ++j ){
+// No prime numbers before 2 
+    if ( n > 2){
+    std::cout << 2 << std::endl;
+// No even number except 2 is prime. Initialize loop variable at 3 and make step size 2 (only check odd numbers). 
+    for (int j{3}; j < n; j +=2 ){
         bool n_is_prime{1};
         
-        for (int i{2}; n_is_prime && i*i <= n; ++i){
-            if (j % 2 == 0 || j % i == 0  ){
+        for (int i{3}; n_is_prime && i*i <= j; ++i){
+            if ( j % i == 0  ){
                 n_is_prime = 0;
             }
         }
@@ -21,6 +25,7 @@ void n_primes(unsigned int n){
         if (n_is_prime){
             std::cout << j << std::endl;
         }
+    }
     }
 
 }
