@@ -14,8 +14,8 @@ void graph(int x1, int y1, int x2, int y2);
 void graph(int x1, int y1, int x2, int y2){
     // if gradient is undefined 
     if (x2-x1 == 0){
-         for (int y{10}; y >= -10; --y){
-      for (int x{-10}; x <= 10; ++x){
+         for (int y{100}; y >= -100; --y){
+      for (int x{-100}; x <= 100; ++x){
         if (x == 0 && y == 0){
           std::cout << "+";
         } 
