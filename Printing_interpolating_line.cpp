@@ -5,7 +5,7 @@
 // This function prints the equation for an interpolated line when arguments x1, y1, x2, and y2 are given. 
 // The arguments with x and y in the identifiers represent the x and y co-ordinate of each point in the cartesian plane, respectively.
 // This program also prints the graph of an integer approximation (using std::round) of the inputted line. The line is visible
-// if it is in the range (-100, 100) and domain (-100, 100)
+// if it has integer coordinates in the range (-10, 10) and domain (-10, 10)
 
 int main();
 void line(double x1, double y1, double x2, double y2);
@@ -150,7 +150,7 @@ int main() {
     
     std::cout << std::endl;
     
-    graph (x1, y1, x2, y2);
+    graph (std::round(x1), std::round(y1), std::round(x2), std::round(y2));
 
     std::cout << std::endl;
     
